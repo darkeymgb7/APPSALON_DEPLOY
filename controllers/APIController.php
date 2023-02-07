@@ -3,7 +3,7 @@
 namespace Controllers;
 
 use Model\Cita;
-use Model\CitaServicio;
+use Model\citaservicio;
 use Model\Servicio;
 
 class APIController {
@@ -29,8 +29,8 @@ class APIController {
                 'citaId' => $id,
                 'servicioId' => $idServicio
             ];
-            $citaServicio = new CitaServicio($args);
-            $citaServicio->guardar();
+            $citaservicio = new citaservicio($args);
+            $citaservicio->guardar();
         }
 
         echo json_encode(['resultado' => $resultado]);

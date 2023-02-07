@@ -2,8 +2,8 @@
 
 namespace Model;
 
-class CitaServicio extends ActiveRecord {
-    protected static $tabla = 'citasservicios';
+class citaservicio extends ActiveRecord {
+    protected static $tabla = 'citaservicio';
     protected static $columnasDB = ['id', 'citaId', 'servicioId'];
 
     public $id;
