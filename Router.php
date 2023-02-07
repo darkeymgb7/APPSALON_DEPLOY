@@ -16,7 +16,11 @@ class Router
     }
 
     public function comprobarRutas() {
-        $currentUrl = strtok($_SERVER['REQUEST_URI'], '?') ?? '/';
+        if ($_SERVER['PATH_INFO']) {
+            $currentUrl = $_SERVER['PATH_INFO'] ?? '/';
+        } else {
+            $currentUrl = $_SERVER['REQUEST_URI'] === '' ? '/' : $_SERVER['REQUEST_URI'];
+        }
         $method = $_SERVER['REQUEST_METHOD'];
             
         //dividimos la URL actual cada vez que exista un '?' eso indica que se están pasando variables por la url
