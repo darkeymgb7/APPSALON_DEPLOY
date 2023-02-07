@@ -3,7 +3,6 @@
 namespace Controllers;
 
 use Model\Servicio;
-use Model\Usuario;
 use MVC\Router;
 
 
