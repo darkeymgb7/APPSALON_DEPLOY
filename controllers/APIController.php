@@ -3,13 +3,13 @@
 namespace Controllers;
 
 use Model\Cita;
-use Model\citaservicio;
+use Model\CitaServicio;
 use Model\Servicio;
 
 class APIController {
     public static function index() {
         $servicios = Servicio::all();
-        echo json_encode($servicios, JSON_UNESCAPED_UNICODE);
+        echo json_encode($servicios);
     }
 
     public static function guardar() {
@@ -29,7 +29,7 @@ class APIController {
                 'citaId' => $id,
                 'servicioId' => $idServicio
             ];
-            $citaservicio = new citaservicio($args);
+            $citaservicio = new CitaServicio($args);
             $citaservicio->guardar();
         }
 
