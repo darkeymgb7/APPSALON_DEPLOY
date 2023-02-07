@@ -8,7 +8,7 @@
 <?php if($error) return; ?>
 <form class="formulario" method="POST">
     <div class="campo">
-        <label for="password">Password</label>
+        <label for="password">Contraseña</label>
         <input
             type="password"
             id="password"
@@ -21,6 +21,6 @@
 </form>
 
 <div class="acciones">
-    <a href="/">¿Ya tienes cuenta? Iniciar Sesión</a>
-    <a href="/crear-cuenta">¿Aún no tienes cuenta? Obtener una</a>
+    <a href="/">Iniciar Sesión</a>
+    <a href="/crear-cuenta">¿Aún no tienes cuenta? </a>
 </div>
