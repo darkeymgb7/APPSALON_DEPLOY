@@ -29,8 +29,8 @@ class APIController {
                 'citaId' => $id,
                 'servicioId' => $idServicio
             ];
-            $citaservicio = new CitaServicio($args);
-            $citaservicio->guardar();
+            $citaServicio = new CitaServicio($args);
+            $citaServicio->guardar();
         }
 
         echo json_encode(['resultado' => $resultado]);
