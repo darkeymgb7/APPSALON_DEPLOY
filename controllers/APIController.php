@@ -33,7 +33,10 @@ class APIController {
             $citaservicio->guardar();
         }
 
-        echo json_encode(['resultado' => $resultado]);
+        $respuesta = [
+            'servicios' => $resultado
+        ];
+        echo json_encode($respuesta);
     }
 
     public static function eliminar() {
